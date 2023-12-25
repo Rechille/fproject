@@ -9,4 +9,17 @@ use Illuminate\Database\Eloquent\Model;
 class Cars extends Model
 {
     use HasFactory;
+
+    protected $table = 'cars';
+
+    protected $primaryKey = 'carID';
+
+    protected $fillable = [
+        'manufacturer',
+        'model',
+        'price',
+        'vin',
+        'description',
+        'imageURL',
+    ];
 }

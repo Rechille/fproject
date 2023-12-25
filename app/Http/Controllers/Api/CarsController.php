@@ -19,17 +19,15 @@ class CarsController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
-    {
-        //
-    }
+    //   
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(string $carID)
     {
-        //
+        return Cars::findorfail($carID);
+
     }
 
     /**
@@ -43,8 +41,12 @@ class CarsController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
-    {
-        //
-    }
+    // public function destroy(string $id)
+    // {
+    //     $cars = Cars::findorfail($id);
+
+    //      $cars->delete();
+
+    //      return $cars;
+    // }
 }
